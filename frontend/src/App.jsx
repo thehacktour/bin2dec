@@ -14,7 +14,7 @@ const MainComponent = () => {
         <h1 style={{color:'blue', fontFamily:'Arial'}}>Tradutor de Binario</h1>
       </div>
       <div style={{display:'flex', justifyContent:'center', alignItems:'center', minHeight:'-80vh'}}>
-        <h3 style={{color:'ActiveBorder', fontFamily:'Georgia'}}>Adicione seu número binario: {inputValue}</h3>
+        <h3 style={{color:'ActiveBorder', fontFamily:'Georgia'}}>Adicione seu número binario:</h3>
         <input
           type="number"
           value={inputValue}
@@ -22,7 +22,7 @@ const MainComponent = () => {
         />
       </div>
       <div style={{display:'flex', justifyContent:'center', alignItems:'center', minHeight:'-80vh'}}  >
-        <h3>Resultado: </h3>
+        <h3>Resultado: {inputValue}</h3>
         <h3></h3>
       </div>
     </div>
