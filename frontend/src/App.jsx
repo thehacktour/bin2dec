@@ -1,11 +1,18 @@
 import { useState } from 'react'
 
+const integerToBinary = (number) => {
+  return number.toString(2);
+};
+
 const MainComponent = () => {
 
   const [inputValue, setInputValue] = useState('')
+  const [resultValue, setResultValue] = useState('')
 
   const manipuladorDeInput = (event) => {
-    setInputValue(event.target.value);
+    const valor = event.target.value;
+    setInputValue(valor);
+    setResultValue(integerToBinary(parseInt(valor, 10) || 0));
   };
 
   return (
@@ -14,7 +21,7 @@ const MainComponent = () => {
         <h1 style={{color:'blue', fontFamily:'Arial'}}>Tradutor de Binario</h1>
       </div>
       <div style={{display:'flex', justifyContent:'center', alignItems:'center', minHeight:'-80vh'}}>
-        <h3 style={{color:'ActiveBorder', fontFamily:'Georgia'}}>Adicione seu número binario: {inputValue}</h3>
+        <h3 style={{color:'ActiveBorder', fontFamily:'Georgia'}}>Adicione seu número binario:</h3>
         <input
           type="number"
           value={inputValue}
@@ -22,7 +29,7 @@ const MainComponent = () => {
         />
       </div>
       <div style={{display:'flex', justifyContent:'center', alignItems:'center', minHeight:'-80vh'}}  >
-        <h3>Resultado: </h3>
+        <h3>Resultado: {resultValue}</h3>
         <h3></h3>
       </div>
     </div>
