@@ -28,9 +28,10 @@ const GeradorDeBinario = () => {
         type="number"
         value={decimalPreFuncao}
         onChange={acontecerNaTela}
+        placeholder='Digite seu decimal'
       />
 
-      <h2>Resultado: {decimalComFuncao}</h2>
+      <h2>Resultado em Binario: {decimalComFuncao}</h2>
       <button onClick={deletarBinario}>
         Apagar
       </button>
