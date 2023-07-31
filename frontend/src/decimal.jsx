@@ -35,8 +35,9 @@ const GeradorDeDecimal = () => {
         type="number"
         value={binarioInicial}
         onChange={manipuladorDeDecimal}
+        placeholder='Digite seu binário'
       />
-      <h2>Resultado: {binarioIncremento}</h2>
+      <h2>Resultado em Decimal: {binarioIncremento}</h2>
       <button onClick={deletarBinario}>Apagar</button>
     </div>
   );
