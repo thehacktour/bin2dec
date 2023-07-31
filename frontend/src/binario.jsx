@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './styles/borda.css'
 
 const integerToBinary = (number) => {
   return number.toString(2);
@@ -21,7 +22,7 @@ const GeradorDeBinario = () => {
   }
 
   return (
-    <div>
+    <div className="site-container">
       <h2>Escreva seu Numero Decimal: </h2>
       <input
         type="number"

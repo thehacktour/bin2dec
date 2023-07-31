@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './styles/borda.css'
 
 const binaryToDecimal = (binaryNumber) => {
   // Verifica se a entrada é um número binário válido (contendo apenas 0 e 1)
@@ -28,7 +29,7 @@ const GeradorDeDecimal = () => {
   }
 
   return (
-    <div>
+    <div className="site-container">
       <h2>Escreva seu Numero Binario:</h2>
       <input
         type="number"
