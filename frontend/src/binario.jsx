@@ -15,6 +15,11 @@ const GeradorDeBinario = () => {
     aplicarFuncao(integerToBinary(parseInt(valor, 10) || 0));
   }
 
+  const deletarBinario = () => {
+    aplicarFuncao('');
+    aparecerNaTela('');
+  }
+
   return (
     <div>
       <h2>Escreva seu Numero Decimal: </h2>
@@ -25,6 +30,9 @@ const GeradorDeBinario = () => {
       />
 
       <h2>Resultado: {decimalComFuncao}</h2>
+      <button onClick={deletarBinario}>
+        Apagar
+      </button>
     </div>
   );
 }
