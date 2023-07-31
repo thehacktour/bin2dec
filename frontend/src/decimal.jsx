@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './styles/borda.css'
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const binaryToDecimal = (binaryNumber) => {
   // Verifica se a entrada é um número binário válido (contendo apenas 0 e 1)
@@ -38,7 +40,7 @@ const GeradorDeDecimal = () => {
         placeholder='Digite seu binário'
       />
       <h2>Resultado em Decimal: {binarioIncremento}</h2>
-      <button onClick={deletarBinario}>Apagar</button>
+      <Button onClick={deletarBinario} variant="outlined" startIcon={<DeleteIcon/>}>Apagar</Button>
     </div>
   );
 }

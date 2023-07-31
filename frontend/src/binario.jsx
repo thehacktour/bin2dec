@@ -1,5 +1,19 @@
 import { useState } from 'react'
 import './styles/borda.css'
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import TextField from '@mui/material/TextField';
+import { CssBaseline, Container, Typography } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+// Crie um tema personalizado com a cor de fundo que você deseja
+const theme = createTheme({
+  palette: {
+    background: {
+      default: '#64b5f6', // Substitua essa cor pela cor desejada (exemplo: azul claro)
+    },
+  },
+});
 
 const integerToBinary = (number) => {
   return number.toString(2);
@@ -22,7 +36,11 @@ const GeradorDeBinario = () => {
   }
 
   return (
+    
     <div className="site-container">
+      <ThemeProvider theme={theme}>
+        <CssBaseline /> 
+      </ThemeProvider>
       <h2>Escreva seu Numero Decimal: </h2>
       <input
         type="number"
@@ -32,9 +50,7 @@ const GeradorDeBinario = () => {
       />
 
       <h2>Resultado em Binario: {decimalComFuncao}</h2>
-      <button onClick={deletarBinario}>
-        Apagar
-      </button>
+      <Button onClick={deletarBinario} variant="outlined" startIcon={<DeleteIcon/>}>Apagar</Button>
     </div>
   );
 }
