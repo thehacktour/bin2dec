@@ -1,0 +1,11 @@
+/* styles.css (ou styles.scss) */
+body {
+  margin: 0;
+  padding: 0;
+  border: 2px solid #ccc; /* Estilo da borda (2px de largura, cor cinza) */
+}
+  
+.site-container {
+  border: 2px solid #ccc; /* Estilo da borda (2px de largura, cor cinza) */
+  padding: 20px; /* Opcional: adicione um espaçamento para melhorar a aparência */
+}
