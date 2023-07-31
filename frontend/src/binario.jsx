@@ -10,7 +10,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     background: {
-      default: '#64b5f6', // Substitua essa cor pela cor desejada (exemplo: azul claro)
+      default: '#15a5f5', // Substitua essa cor pela cor desejada (exemplo: azul claro)
     },
   },
 });
